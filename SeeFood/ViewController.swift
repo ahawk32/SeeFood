@@ -17,7 +17,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     let imagePicker = UIImagePickerController()
     
-    
+    func navBar()->UINavigationBar?{
+        let navBar = self.navigationController?.navigationBar
+        return navBar
+    }
     
 
     override func viewDidLoad() {
@@ -31,7 +34,32 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
+    
+    func setTNavBarTitleAsLabel(title: String, color: UIColor ){
 
+        // removed some code..
+
+        let navigationTitlelabel = UILabel(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        navigationTitlelabel.numberOfLines = 1
+        navigationTitlelabel.lineBreakMode = .byTruncatingTail
+
+        navigationTitlelabel.adjustsFontSizeToFitWidth = true
+        navigationTitlelabel.minimumScaleFactor = 0.1
+        navigationTitlelabel.textAlignment = .center
+        navigationTitlelabel.textColor  = color
+        navigationTitlelabel.text = title
+
+        if let navBar = navBar(){
+            //was navBar.topItem?.title = title
+
+            self.navBar()?.topItem?.titleView = navigationTitlelabel
+            //navBar.titleTextAttributes = [.foregroundColor : color ?? .black]
+        }
+    }
+    
+    
+    
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
@@ -68,9 +96,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             //print(results)
             if let firstResult = results.first {
                 if firstResult.identifier.contains("hotdog"){
-                    self.navigationItem.title = "My gullocks what a gargantuan GLizzy that is my good sir"
+//                    self.navigationItem.title = "My gullocks what a gargantuan GLizzy that is my good sir"
+                    self.setTNavBarTitleAsLabel(title: "My gullocks what a gargantuan GLizzy that is my good sir", color: UIColor.white)
+                    
                 } else {
-                    self.navigationItem.title = "Yooo that aint no glizzy, thats a \(firstResult.identifier)"//"Not hotdog!" //change it to firstResult.identifier
+                    
+                    self.setTNavBarTitleAsLabel(title: "Yooo that aint no glizzy, thats a \(firstResult.identifier)", color: UIColor.white)
+                    
+                    
+                    
+//                    self.navigationItem.title = "Yooo that aint no glizzy, thats a \(firstResult.identifier)"//"Not hotdog!" //change it to firstResult.identifier
                 }
             }
             
