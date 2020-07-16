@@ -13,6 +13,7 @@
 		ECA3EEA124BFA9AD0094B7BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA3EE9F24BFA9AD0094B7BA /* Main.storyboard */; };
 		ECA3EEA324BFA9BA0094B7BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA3EEA224BFA9BA0094B7BA /* Assets.xcassets */; };
 		ECA3EEA624BFA9BA0094B7BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA3EEA424BFA9BA0094B7BA /* LaunchScreen.storyboard */; };
+		ECA3EEAE24BFAA7D0094B7BA /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = ECA3EEAD24BFAA7C0094B7BA /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		ECA3EEA224BFA9BA0094B7BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECA3EEA524BFA9BA0094B7BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECA3EEA724BFA9BA0094B7BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECA3EEAD24BFAA7C0094B7BA /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				ECA3EEA224BFA9BA0094B7BA /* Assets.xcassets */,
 				ECA3EEA424BFA9BA0094B7BA /* LaunchScreen.storyboard */,
 				ECA3EEA724BFA9BA0094B7BA /* Info.plist */,
+				ECA3EEAD24BFAA7C0094B7BA /* Inceptionv3.mlmodel */,
 			);
 			path = SeeFood;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECA3EE9E24BFA9AD0094B7BA /* ViewController.swift in Sources */,
+				ECA3EEAE24BFAA7D0094B7BA /* Inceptionv3.mlmodel in Sources */,
 				ECA3EE9A24BFA9AD0094B7BA /* AppDelegate.swift in Sources */,
 				ECA3EE9C24BFA9AD0094B7BA /* SceneDelegate.swift in Sources */,
 			);
